@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;  
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+}
+
+.logo {
+    width: 150px;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    margin-top: 20px;
+}
+
+video {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+}
+
+.logo {
+    width: 150px;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+img {
+    width: 300px;
+    margin-top: 20px;
+}
+
+video {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+p {
+    color: #ffffff;
+}
+
+h2 {
+    color: #FFD700;
+}
+
+h1 {
+    color: #FFD700;
+}
+
+#cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart ul li {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+p2 {
+    color: white;
+    font-size: 40px;
+}
+
+
+#cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#cart li img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#cart li span {
+    margin-right: auto;
+}
+
+
+.language-dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.toggle-details {
+    margin: 10px 0;
+}
+
+p3 {
+    color: #ffffff;
+}
+
+.MindMap img {
+    width: 1000px;
+    height: auto;
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.blogs-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.blog {
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+}
+
+.blog h2 {
+    text-align: center;
+}
+
+.blog-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.week-content {
+    display: none;
+    margin: 10px 0;
+    padding: 10px;
+    color: white;
+}
+
+button.week-btn {
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 50%;
+    background-color: rgba(26, 140, 253, 0.1);
+    color: white;
+    border-radius: 10px;
+    height: 25px;
+}
+
+button.week-btn:hover {
+    background-color: rgba(104, 180, 255, 0.3);
+}
+
+
+h3 {
+    color: #FFD700;
+    font-size: 50px;
+    
+}
+
+h4 {
+    color: #FFD700;
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
+    color: white;
+}
+
+
+
+table, th, td {
+    border:1px solid #FFD700;
+    color: white;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#icon-overlay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+#icon-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}   
+#icon-button img {
+    width: 100%;
+    position: absolute;
+    top: -25%;
+    left: 0;
+    border-radius: 30px;
+    transition: opacity 0.3s ease;
+}
+#info-box {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 400px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#icon-overlay:hover #icon-button {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+#icon-overlay:hover #icon-button img {
+    opacity: 0;
+}
+#icon-overlay:hover #info-box {
+    display: block;
+    
+}
+
+
+
+
+
+/* Styling für das Bild */
+.logo {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay Styling */
+.overlay {
+    display: none; /* Startet als versteckt */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dunkler Hintergrund */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: flex;
+}
+
+.overlay img {
+    width: 40%; /* Nimmt die volle Breite des Overlays */
+    height: auto; /* Hält das Seitenverhältnis bei */
+}
+
+
+
+
+
+
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; /* Damit der Button über anderen Elementen ist */
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    transition: 0.3s ease;
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+/* Stil für das große Modell */
+.main-model {
+    width: 60%; /* 80% - 20% = 60% der Breite */
+    margin-left: 20%; /* Startet bei 20% */
+    height: 500px;
+    border: 1px solid red; /* Testborder, zum Debugging */
+    position: relative; /* Sicherstellen, dass das Modell innerhalb bleibt */
+    overflow: hidden; /* Verhindert Überlauf */
+}
+
+/* Stil für die kleineren Modelle */
+.small-models {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.small-model {
+    width: 25%; /* 25% der Breite für jede Spalte */
+    height: 200px;
+    border: 1px solid blue; /* Testborder */
+    position: relative; /* Sicherstellen, dass das Modell innerhalb bleibt */
+    overflow: hidden; /* Verhindert Überlauf */
+}
+
+/* Optional: Responsive Design */
+@media (max-width: 768px) {
+    .main-model {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .small-model {
+        width: 45%;
+        margin: 2.5%; /* Platz zwischen den Modellen */
+    }
+}
+
+
+
+#discount-banner {
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+/* Globale CSS für das Overlay-Text */
+.overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Hintergrund halbtransparent */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 1; /* Über dem Modell */
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

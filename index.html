@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundOfSilence - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Background container styling */
+        #moving-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Behind content */
+            overflow: hidden;
+        }
+
+        /* Styling for each row of images */
+        .image-row {
+            position: absolute;
+            display: flex;
+            white-space: nowrap;
+        }
+
+        /* Row positions based on percentages */
+        .row-1 { top: 3%; height: 30%; }
+        .row-2 { top: 34%; height: 30%; }
+        .row-3 { top: 65%; height: 30%; }
+
+        /* Ensure all images have the same height and maintain aspect ratio */
+        .image-row img {
+            height: 100%; /* Image height matches row height */
+            width: auto; /* Automatically adjust the width to maintain aspect ratio */
+            margin-right: 10px; /* Add space between images */
+            opacity: 0.7; /* Fading effect (bleached look) */
+            transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* On hover, the image appears fully */
+        .image-row img:hover {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wir.html">Über uns</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="werbung.html">Werbung</a></li>
+            <li><a href="produkt.html">Produkte</a></li>
+            <li><a href="shop.html">Onlineshop</a></li>
+            <li><a href="jobangebote.html">Jobangebote</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div id="icon-overlay">
+        <div id="icon-button">
+            <img src="images/logo1.png" alt="logo1">
+        </div>
+        <div id="info-box">
+            <h3>SoundOfSilence</h3>
+            <a href="mailto:SoundOfSilenceHelp@gmail.com">SoundOfSilenceHelp@gmail.com</a><br>
+            <a href="https://www.tiktok.com/@soundofsilence901?_t=8q0mpCN4J9M&_r=1"><img src="images/tiktok.png" alt="tiktok" style="width: 60px; height: auto; vertical-align: middle;">SoundOfSilence</a><br>
+            <br>
+            <p4><strong>Michael Auer</strong></p4><br>
+            <p4><strong>Noah Völlenklee</strong></p4><br>
+            <p4><strong>Jonas Giersig</strong></p4>
+        </div>
+    </div>
+
+
+
+
+
+    <header>
+        <br><br><br><br><br><br><br><br><br><br>
+        <img src="images/logo.png" alt="Logo der Firma" class="logo" onclick="openOverlay(this.src)" />
+        <div id="imageOverlay" class="overlay" onclick="closeOverlay()">
+            <img id="overlayImage" src="" alt="Großes Bild">
+        </div>
+        <h1>SoundOfSilence GmbH</h1>
+        <p3>Be quiet and listen</p3>
+    </header>
+
+
+  <!-- Background moving images container -->
+  <div id="moving-background"></div>
+
+  <!-- JavaScript to create the infinite scrolling background -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const imagePath = 'images/'; // Path to the image folder
+
+
+         // List of image filenames (actual image filenames from your folder)
+         const imageFiles = [
+             '3D_jonas.jpg', '3d2_jonas.jpg', '3ddeckel_noah.jpeg', '3dkaputt_much.jpeg', 
+             '5a_much.jpeg', '5a_noah.jpeg', '5a2_much.jpeg', 'code_jonas.jpg', 
+             'deckel_noah.png', 'drehteil_jonas.png', 'drehteil_noah.png',
+             'einsatz_jonas.jpeg', 'fertig1_noah.jpg', 'fräsen1_noah.jpg', 
+             'fuß_jonas.png', 'fuß_noah.jpeg', 'fußdreh_jonas.jpeg', 'fußz_jonas.png', 
+             'ges_fer_noah.png', 'ges_jonas.png', 'ges_much.png', 'ges_noah.png', 
+             'glas_noah.png', 'griffdreh_noah.jpeg', 'gru_fer_much.jpeg', 'grund_much.png', 
+             'Grund_Noah.png', 'halter_jonas.png', 'hülle_jonas.png', 'hülle_jonas.png', 'Noah_seite.png', 
+             'pr_dreh_jonas.png', 'pr_dreh_noah.png', 'fertig_much.png', 'fertig_jonas.png', 'fertig_noah.png', 
+             'seite_jonas.png', 'seite_much.png', 'seite1_noah.jpeg', 
+             'seite2_jonas.png', 'seite2_much.jpeg', 'seite2_noah.jpeg', 
+             'seite3d_jonas.png', 'seite5a_noah.jpeg', 'zsm_much.jpeg', 
+             'zsm_noah.jpeg', 'zsm2_noah.jpeg', 'zsmd_noah.jpeg', 'griffdreh_much.jpeg', 'fußdreh_much.jpeg',
+         ];
+   // Function to create an <img> element
+   function createImageElement(src) {
+                const img = document.createElement('img');
+                img.src = `${imagePath}${src}`; // Combine path and filename
+                return img;
+            }
+
+            // Function to continuously append enough images to fill the screen and scroll infinitely
+            function appendImagesToRow(row) {
+                const rowWidth = row.offsetWidth; // Get the width of the row
+                let totalWidth = 0;
+                const shuffledImages = [...imageFiles].sort(() => Math.random() - 0.5);
+
+                // Append images until the row is filled
+                while (totalWidth < window.innerWidth * 2) { // Fill the width twice over for smooth scroll
+                    shuffledImages.forEach(imageSrc => {
+                        const img = createImageElement(imageSrc);
+                        row.appendChild(img);
+                        totalWidth += img.offsetWidth + 10; // Account for margin-right
+                    });
+                }
+            }
+
+            // Function to create a row of moving images
+            function createImageRow(className, direction) {
+                const row = document.createElement('div');
+                row.className = `image-row ${className}`;
+
+                // Append enough images to fill the screen
+                appendImagesToRow(row);
+                document.getElementById('moving-background').appendChild(row);
+
+                // Animation logic
+                let xOffset = direction === 'left' ? 0 : -row.scrollWidth;
+
+                function animate() {
+                    xOffset += direction === 'left' ? -1 : 1;
+                    row.style.transform = `translateX(${xOffset}px)`;
+
+                    // If row has scrolled completely off the screen, reset position
+                    if (direction === 'left' && xOffset < -row.scrollWidth) {
+                        xOffset = window.innerWidth; // Reset to right side
+                    } else if (direction === 'right' && xOffset > window.innerWidth) {
+                        xOffset = -row.scrollWidth; // Reset to left side
+                    }
+
+                    requestAnimationFrame(animate);
+                }
+
+                animate();
+            }
+
+            // Set up the background container
+            const backgroundContainer = document.getElementById('moving-background');
+
+            // Create and animate the three rows
+            createImageRow('row-1', 'left');  // First row moves left
+            createImageRow('row-2', 'right'); // Second row moves right
+            createImageRow('row-3', 'left');  // Third row moves left
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundOfSilence - Produkte</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wir.html">Über uns</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="werbung.html">Werbung</a></li>
+            <li><a href="produkt.html">Produkte</a></li>
+            <li><a href="shop.html">Onlineshop</a></li>
+            <li><a href="jobangebote.html">Jobangebote</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div id="icon-overlay">
+        <div id="icon-button">
+            <img src="images/logo1.png" alt="logo1">
+        </div>
+        <div id="info-box">
+            <h3>SoundOfSilence</h3>
+            <a href="mailto:SoundOfSilenceHelp@gmail.com">SoundOfSilenceHelp@gmail.com</a><br>
+            <a href="https://www.tiktok.com/@soundofsilence901?_t=8q0mpCN4J9M&_r=1"><img src="images/tiktok.png" alt="tiktok" style="width: 60px; height: auto; vertical-align: middle;">SoundOfSilence</a><br>
+            <br>
+            <p4><strong>Michael Auer</strong></p4><br>
+            <p4><strong>Noah Völlenklee</strong></p4><br>
+            <p4><strong>Jonas Giersig</strong></p4>
+        </div>
+    </div>
+
+
+
+    <section>
+        <h2>Unsere Produkte</h2>
+        <p>Erfahre mehr über unsere innovativen Musikboxen, die dein Hörerlebnis verbessern.</p>
+    
+        <img src="images/fertig_much.png" alt="Musikbox 1" onclick="openOverlay(this.src)">
+        <p>Musikbox Modell Much</p>
+        <a href="Dateien/Manual_much.pdf" download>
+            <button class="download-button">Download Manual</button>
+        </a>
+        <a href="much.html">
+            <button class="info-button">3D Ansichten</button>
+        </a>
+        <br><br>
+    
+        <img src="images/fertig_jonas.png" alt="Musikbox 1" onclick="openOverlay(this.src)">
+        <p>Musikbox Modell Jonas</p>
+        <a href="Dateien/Manual_jonas.pdf" download>
+            <button class="download-button">Download Manual</button>
+        </a>
+        <a href="jonas.html">
+            <button class="info-button">3D Ansichten</button>
+        </a>
+        <br><br>
+    
+        <img src="images/fertig_noah.png" alt="Musikbox 1" onclick="openOverlay(this.src)">
+        <p>Musikbox Modell Noah</p>
+        <a href="Dateien/Manual_noah.pdf" download>
+            <button class="download-button">Download Manual</button>
+        </a>
+        <a href="noah.html">
+            <button class="info-button">3D Ansichten</button>
+        </a>
+    </section>
+    
+    <div id="imageOverlay" class="overlay" onclick="closeOverlay()">
+        <img id="overlayImage" src="" alt="Großes Bild">
+    </div>
+</body>
+</html>
